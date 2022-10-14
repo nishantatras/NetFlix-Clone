@@ -100,7 +100,7 @@ img {
 }
 
 .main-content {
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     border-bottom: 10px solid rgb(94, 92, 92);
     padding-top: 15vh;
@@ -109,13 +109,12 @@ img {
 .main-content-image {
     margin-left: auto;
     margin-right: auto;
-    min-width: 40vw;
-    min-height: 60%;
+    max-width: 40vw;
+    max-height: 60%;
 }
 
 .main-content-image:hover {
-    box-shadow: 5px 5px rgb(94, 92, 92, 0.2);
-
+    box-shadow: 5px 5px 5px 5px rgb(94, 92, 92, 0.5);
 }
 
 .main-content span {
@@ -127,7 +126,8 @@ img {
 }
 
 .faq-content {
-    height: 98vh;
+
+    height: 100vh;
     width: 100%;
     border-bottom: 10px solid rgb(94, 92, 92);
 }
@@ -155,18 +155,18 @@ a {
     text-decoration: none;
 }
 
-.faq-container {
+.faq-container { 
     width: 50vw;
     margin-left: auto;
     margin-right: auto;
 }
 
 .footer-container {
-    height: 35vh;
+    height: 30vh;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 10%;
+    padding-top: 8%;
 }
 
 .footer {
@@ -192,12 +192,20 @@ a {
 
 .footer p {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 @media screen and (max-width:940px) {
     .main-page {
-        height: 80vh;
+        height: 70vh;
+    }
+
+    .main-content {
+        height: 40vh;
+        padding-top: 5vh;
+    }
+
+    .main-text {
+        margin-top: 4vh;
     }
 
     .main-text span {
@@ -214,11 +222,6 @@ a {
         font-size: 15px;
     }
 
-    .main-content {
-        height: 50vh;
-        padding-top: 5vh;
-    }
-
     .faq-content li {
         padding: 15px;
         margin-bottom: 6px;
@@ -229,7 +232,7 @@ a {
     }
 
     .faq-content {
-        height: 80vh;
+        height: 70vh;
     }
 
     #membership {
@@ -249,8 +252,17 @@ a {
 
 
 @media screen and (max-width:720px) {
+    .main-page {
+        height: 60vh;
+    }
+
+    .main-content {
+        height: 35vh;
+        padding-top: 5vh;
+    }
+
     .faq-content {
-        height: 75vh;
+        height: 70vh;
     }
 
     #membership {
@@ -270,11 +282,18 @@ a {
     .footer a {
         font-size: 15px;
     }
+
+    .signin-small {
+        display: none;
+    }
+    #bold{
+    font-size: 22px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .main-content {
-        padding-top: 7vh;
+        padding-top: 8vh;
     }
 
     .main-content span {
@@ -286,7 +305,186 @@ a {
         font-size: 28px;
     }
 
-    .faq-container {
-        width: 70vw;
+    .faq-content {
+        height: 70vh;
     }
+}
+
+/* Sign In form */
+
+.main-container {
+    height: 80vh;
+}
+
+.Signin {
+    position: relative;
+    z-index: 2;
+    left: 50;
+    background-color: black;
+    height: 65vh;
+    max-width: 45vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.Signin-container {
+    height: 80%;
+    width: 100%;
+    padding: 10%;
+}
+
+.si-main-page {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(17, 16, 16)), url(../images/headbanner.jpeg);
+}
+
+.logo {
+    height: 5vh;
+    margin-top: 4vh;
+    margin-left: 4vh;
+}
+
+.si-footer-container {
+    height: 30vh;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8%;
+}
+
+.si-footer {
+    color: grey;
+}
+
+.si-footer a {
+    color: grey;
+    font-size: 20px;
+}
+
+.si-footer a:hover {
+    text-decoration: underline;
+    transition: 1s;
+}
+
+.si-footer-row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.si-footer p {
+    text-align: center;
+}
+
+.Signin p {
+    color: grey;
+    margin-bottom: 1vh;
+    font-size: 15px;
+}
+
+.Signin input {
+    display: block;
+    width: 100%;
+    padding: 1.5vh;
+    margin-bottom: 1vh;
+    border-radius: 5px;
+    border: none;
+}
+
+.Signin button {
+    background-color: red;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 1.5vh;
+    margin-top: 2vh;
+    border-radius: 5px;
+}
+
+#signin {
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 3vh;
+}
+
+.Signin form {
+    margin-bottom: 5vh;
+}
+
+.Signin a {
+    font-size: 16px;
+}
+
+.Signin a:hover {
+    text-decoration: underline;
+}
+
+.Signin label {
+    color: white;
+}
+
+@media screen and (max-width:720px) {
+    .Signin {
+        max-width: 100vw;
+        height: 80vh;
+        border-radius: 0;
+        border-bottom: 1PX solid gray;
+    }
+
+    .Signin-container {
+        height: 80%;
+        width: 100%;
+        padding: 10%;
+    }
+
+    #signin {
+        color: white;
+        font-size: 55px;
+        margin-bottom: 5vh;
+    }
+
+    .Signin input {
+        display: block;
+        width: 100%;
+        padding: 2vh;
+        margin-bottom: 3vh;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .Signin button {
+        background-color: red;
+        border: none;
+        color: white;
+        width: 100%;
+        padding: 1.5vh;
+        margin-top: 4vh;
+        border-radius: 5px;
+        margin-bottom: 3vh;
+    }
+
+    .Signin p {
+        color: grey;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-height:720px){
+
+.faq-content{
+height: 90vh;
+}
+
+.main-page{
+    height: 80vh;
+}
+#bold{
+    font-size: 21px;
+}
 }
